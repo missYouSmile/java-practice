@@ -16,32 +16,23 @@ public class QuickSort {
         int cur = l + 1;
 
         int mid = (r - l) / 2 + l;
-        swap(data, l, mid);
+        SortUtils.swap(data, l, mid);
         E pv = data[l];
 
         while (cur <= gt) {
             int compare = data[cur].compareTo(pv);
             if (compare > 0)
-                swap(data, cur, gt--);
+                SortUtils.swap(data, cur, gt--);
             else if (compare < 0)
-                swap(data, cur++, lt++);
+                SortUtils.swap(data, cur++, lt++);
             else
                 cur++;
         }
 
-        swap(data, l, lt - 1);
+        SortUtils.swap(data, l, lt - 1);
 
         sort(data, l, lt - 1);
         sort(data, gt + 1, r);
-    }
-
-    /**
-     * swap index i and j
-     */
-    private static <E> void swap(E[] data, int i, int j) {
-        E temp = data[i];
-        data[i] = data[j];
-        data[j] = temp;
     }
 
 }

@@ -17,7 +17,8 @@ public class TestUtils {
         long end = System.nanoTime();
         if (testName == null)
             testName = "";
-        System.out.println(testName + " spend time : " + (end - start) / 1000000000.0 + " s.");
+        double time = (end - start) / 1000000000.0;
+        System.out.println(testName + " spend time : " + time + " s.");
     }
 
 }
