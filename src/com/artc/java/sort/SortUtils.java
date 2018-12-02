@@ -22,6 +22,14 @@ public class SortUtils {
         return data;
     }
 
+    public static Integer[] copy(Integer[] source) {
+        Integer[] target = new Integer[source.length];
+        for (int i = 0; i < source.length; i++) {
+            target[i] = source[i];
+        }
+        return target;
+    }
+
     public static <E extends Comparable<E>> void checkSortedDesc(E[] data) {
         for (int i = 1; i < data.length; i++) {
             if (data[i - 1].compareTo(data[i]) < 0)
