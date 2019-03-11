@@ -6,4 +6,6 @@ package com.artc.java.proxy;
  */
 public interface Manager {
     void manage();
+
+    String concat(String value1, String value2);
 }
